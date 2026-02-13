@@ -6,6 +6,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterationController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostResourseController;
+use App\Http\Controllers\HomeController;
+
 
 
 
@@ -89,3 +93,12 @@ Route::get("hello" , function(){
     return "hello route 3";
 
 })->name("hello");
+
+Route::get("/posts" , [PostController::class , "index"]);
+Route::get("post/{id}" , [PostController::class , "show"]);
+
+
+
+Route::resource("posts_resource" , PostResourseController::class);
+
+Route::get("/home" ,  HomeController::class);
