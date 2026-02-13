@@ -86,6 +86,20 @@ Route::get("/register" , action: [RegisterationController::class , "register"]);
 
 Route::get("hello" , function(){
 
-    return "hello route 1";
-    
+    return "hello route 3";
+
 })->name("hello");
+
+
+/*
+1 
+2
+3
+
+git revert 
+4 733c5fd
+
+5
+
+
+*/
