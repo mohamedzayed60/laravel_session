@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\LoginController;
+
 
 
 
@@ -76,3 +78,5 @@ Route::domain("admin.example.com")->group(function(){
     });
 
 });
+
+Route::get("/login" , action: [LoginController::class , "login"]);
