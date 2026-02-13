@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostResourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormResourseController;
+use App\Http\Controllers\ResponseController;
 
 
 
@@ -106,3 +107,6 @@ Route::get("/home" ,  HomeController::class);
 
 Route::get("form" , action: [FormResourseController::class ,"index"]);
 Route::post("form/store" , action: [FormResourseController::class ,"store"])->name("form.store");
+
+Route::get("response" , [ResponseController::class , "index"])->name("hello_redirect");
+Route::get("redirect" , [ResponseController::class , "redirect"]);
