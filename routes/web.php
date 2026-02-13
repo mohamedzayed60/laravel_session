@@ -86,6 +86,6 @@ Route::get("/register" , action: [RegisterationController::class , "register"]);
 
 Route::get("hello" , function(){
 
-    return "hello route 1";
-    
+    return "hello route 2";
+
 })->name("hello");
