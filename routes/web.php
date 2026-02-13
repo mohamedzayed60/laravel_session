@@ -83,3 +83,9 @@ Route::domain("admin.example.com")->group(function(){
 Route::get("/login" , action: [LoginController::class , "login"]);
 
 Route::get("/register" , action: [RegisterationController::class , "register"]);
+
+Route::get("hello" , function(){
+
+    return "hello route 1";
+    
+})->name("hello");
