@@ -26,6 +26,10 @@ class AdminController extends Controller
         return "the name is : " . $name . " the email is : " . $email . " the password is : " . $password   ;
     }
     public function show(){
-        return "show message";
+
+
+
+        return "show message from admin controller";
+
     }
 }
