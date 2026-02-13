@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterationController;
 
 
 
@@ -80,3 +81,5 @@ Route::domain("admin.example.com")->group(function(){
 });
 
 Route::get("/login" , action: [LoginController::class , "login"]);
+
+Route::get("/register" , action: [RegisterationController::class , "register"]);
