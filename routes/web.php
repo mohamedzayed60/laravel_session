@@ -11,6 +11,7 @@ use App\Http\Controllers\PostResourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormResourseController;
 use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\ViewController;
 
 
 
@@ -110,3 +111,5 @@ Route::post("form/store" , action: [FormResourseController::class ,"store"])->na
 
 Route::get("response" , [ResponseController::class , "index"])->name("hello_redirect");
 Route::get("redirect" , [ResponseController::class , "redirect"]);
+
+Route::get("posts_view" , [ViewController::class , "index"])->name("posts_view");
