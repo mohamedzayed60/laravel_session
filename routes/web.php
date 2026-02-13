@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterationController;
+use App\Http\Controllers\PostController;
 
 
 
@@ -89,3 +90,6 @@ Route::get("hello" , function(){
     return "hello route 3";
 
 })->name("hello");
+
+Route::get("/posts" , [PostController::class , "index"]);
+Route::get("post/{id}" , [PostController::class , "show"]);
