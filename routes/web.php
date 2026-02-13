@@ -9,6 +9,7 @@ use App\Http\Controllers\RegisterationController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostResourseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FormResourseController;
 
 
 
@@ -102,3 +103,6 @@ Route::get("post/{id}" , [PostController::class , "show"]);
 Route::resource("posts_resource" , PostResourseController::class);
 
 Route::get("/home" ,  HomeController::class);
+
+Route::get("form" , action: [FormResourseController::class ,"index"]);
+Route::post("form/store" , action: [FormResourseController::class ,"store"])->name("form.store");
