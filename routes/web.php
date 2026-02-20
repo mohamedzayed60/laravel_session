@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostResourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormResourseController;
+use App\Http\Controllers\FacadeDBController;
 
 
 
@@ -106,3 +107,13 @@ Route::get("/home" ,  HomeController::class);
 
 Route::get("form" , action: [FormResourseController::class ,"index"]);
 Route::post("form/store" , action: [FormResourseController::class ,"store"])->name("form.store");
+Route::get("insert_user" , [FacadeDBController::class , "insertIntoUserTable"]);
+Route::get("get_users" , [FacadeDBController::class , "getAllUsers"]);
+Route::get("getById/{id}" , [FacadeDBController::class ,"getById"]);
+Route::get("updateUser/{id}" , [FacadeDBController::class , "updateUser"]);
+Route::get("deleteuser/{id}" , [FacadeDBController::class ,"deleteUser"]);
+Route::get("rawSelect" , [FacadeDBController::class , "rawSelect"]);
+Route::get("insertUser" , [FacadeDBController::class ,"insertUser"]);
+Route::get("getUsersWithPosts" , [FacadeDBController::class ,"getUsersWithPosts"]);
+
+
