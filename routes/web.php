@@ -75,6 +75,8 @@ Route::controller(OrderController::class)->group(function(){
     Route::get("ordegetall" , "getAll");
     Route::get("getone/{id}" , "getById");
     Route::get("store" , "store");
+    Route::get("insert/order", "insert");
+    Route::get("getOrderWithItems/{id}","getOrderWithItems");
 
 });
 
@@ -126,3 +128,12 @@ Route::get("products/form" , [ProductController::class ,"showForm"])->name("prod
 Route::get("delete/{id}" , [ProductController::class , "delete"])->name("products.delete");
 Route::post("update/{id}" , [ProductController::class ,"update"])->name("products.update");
 Route::get("edit/{id}" , [ProductController::class , "edit"])->name("products.edit");
+Route::get("getByPriceRange" , [ProductController::class , "getProductByPriceRange"])->name("products.priceRange");
+Route::get("getByName/{name}" , [ProductController::class , "getByName"])->name("products.getByName");
+Route::get("getCount" , [ProductController::class , "getCount"])->name("products.getCount");
+Route::get("orderByPrice" , [ProductController::class , "orderByPrice"])->name("products.orderByPrice");
+Route::get("getProductLimit/{number}" , [ProductController::class , "getProductLimit"])->name("products.getProductLimit");
+Route::get("getProductPagenate/{number}" , [ProductController::class , "getProductPagenate"])->name("products.getProductPagenate");
+Route::get("getProductBySimplePaginate/{number}" , [ProductController::class , "getProductBySimplePaginate"])->name("products.getProductBySimplePaginate");
+Route::get("getProductByCursorPaginate/{number}" , [ProductController::class , "getProductByCursorPaginate"])->name("products.getProductByCursorPaginate");
+// Route::get("" , [ProductController::class ,
