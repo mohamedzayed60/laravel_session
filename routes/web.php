@@ -75,6 +75,8 @@ Route::controller(OrderController::class)->group(function(){
     Route::get("ordegetall" , "getAll");
     Route::get("getone/{id}" , "getById");
     Route::get("store" , "store");
+    Route::get("insert/order", "insert");
+    Route::get("getOrderWithItems/{id}","getOrderWithItems");
 
 });
 
@@ -134,3 +136,4 @@ Route::get("getProductLimit/{number}" , [ProductController::class , "getProductL
 Route::get("getProductPagenate/{number}" , [ProductController::class , "getProductPagenate"])->name("products.getProductPagenate");
 Route::get("getProductBySimplePaginate/{number}" , [ProductController::class , "getProductBySimplePaginate"])->name("products.getProductBySimplePaginate");
 Route::get("getProductByCursorPaginate/{number}" , [ProductController::class , "getProductByCursorPaginate"])->name("products.getProductByCursorPaginate");
+// Route::get("" , [ProductController::class ,
