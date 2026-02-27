@@ -8,6 +8,7 @@ use App\Models\OrderItem;
 
 class OrderController extends Controller
 {
+    
     public function getAll(){
         return "get all orders";
 
@@ -23,6 +24,8 @@ class OrderController extends Controller
 
 
 
+
+    
     public function insert(){
        $order=  Order::create([
             "customer_name" => "mohamed",
