@@ -11,7 +11,7 @@ use App\Http\Controllers\PostResourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormResourseController;
 use App\Http\Controllers\FacadeDBController;
-
+use App\Http\Controllers\ProductController;
 
 
 
@@ -117,3 +117,12 @@ Route::get("insertUser" , [FacadeDBController::class ,"insertUser"]);
 Route::get("getUsersWithPosts" , [FacadeDBController::class ,"getUsersWithPosts"]);
 
 
+
+
+//model 
+Route::get("products" , action: [ProductController::class , "index"])->name("products.index");
+Route::post("products/store" , action: [ProductController::class , "store"])->name("products.store");
+Route::get("products/form" , [ProductController::class ,"showForm"])->name("products.form");
+Route::get("delete/{id}" , [ProductController::class , "delete"])->name("products.delete");
+Route::post("update/{id}" , [ProductController::class ,"update"])->name("products.update");
+Route::get("edit/{id}" , [ProductController::class , "edit"])->name("products.edit");

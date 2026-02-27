@@ -14,4 +14,4 @@ route::get("test" , function(){
 });
 
 
-Route::get("products" , [ProductController::class , "getAllProducts"])->name("products.all");
+// Route::get("products" , [ProductController::class , "getAllProducts"])->name("products.all");
