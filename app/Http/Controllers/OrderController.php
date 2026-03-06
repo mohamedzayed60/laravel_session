@@ -11,8 +11,9 @@ class OrderController extends Controller
     
     public function getAll(){
         return "get all orders";
-
     }
+
+    
     public function getById($id){
         return "get order by id : " . $id;
 
