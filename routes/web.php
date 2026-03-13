@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FormResourseController;
 use App\Http\Controllers\FacadeDBController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PhotoController;
 
 
 
@@ -137,3 +138,13 @@ Route::get("getProductPagenate/{number}" , [ProductController::class , "getProdu
 Route::get("getProductBySimplePaginate/{number}" , [ProductController::class , "getProductBySimplePaginate"])->name("products.getProductBySimplePaginate");
 Route::get("getProductByCursorPaginate/{number}" , [ProductController::class , "getProductByCursorPaginate"])->name("products.getProductByCursorPaginate");
 // Route::get("" , [ProductController::class ,
+
+
+
+
+// routes for photo project 
+
+
+Route::get("/photoform" , [PhotoController::class , "create"]);
+Route::post("/upload" , [PhotoController::class , "store"]);
+Route::get("/photos" , [PhotoController::class , "index"])->name("photos.index");
