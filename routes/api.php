@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PostController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -15,3 +16,16 @@ route::get("test" , function(){
 
 
 // Route::get("products" , [ProductController::class , "getAllProducts"])->name("products.all");
+
+
+
+//to get all posts
+Route::get("/posts", [PostController::class , "index"]);
+
+Route::get("/posts/{id}", [PostController::class , "show"]);
+
+Route::post("/posts", [PostController::class , "store"]);
+
+Route::delete("/posts/{id}", [PostController::class , "destroy"]);
+
+Route::put("/posts/{id}", [PostController::class , "update"]);
